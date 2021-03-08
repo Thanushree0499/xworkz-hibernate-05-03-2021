@@ -89,4 +89,72 @@ public class MobileServiceImpl implements MobileService {
 		return false;
 	}
 
+	@Override
+	public boolean validateAndRead(MobileDTO mobileDTO) {
+		int mobileId=0;
+		boolean validData = false;
+		if (mobileDTO != null) {
+			System.out.println("dto is not null, will validate fields");
+		    mobileId=mobileDTO.getMobileId();
+	        if(mobileId > 0) {
+			    System.out.println("mobileId is valid");
+			    validData = true;
+		    } else {
+			    System.out.println("mobileId is invalid");
+			    validData = false;
+		}
+		}if (validData) {
+			System.out.println("data is valid , can invoke mobiledao");
+			mobilesDAO.readMobile(mobileId);
+		} else {
+			System.out.println("mobiledto is null, invalid data");
+		}
+		return false;
+	}
+
+	@Override
+	public boolean validateAndUpdate(MobileDTO mobileDTO) {
+		int mobileId=0;
+		boolean validData = false;
+		if (mobileDTO != null) {
+			System.out.println("dto is not null, will validate fields");
+		    mobileId=mobileDTO.getMobileId();
+	        if(mobileId > 0) {
+			    System.out.println("mobileId is valid");
+			    validData = true;
+		    } else {
+			    System.out.println("mobileId is invalid");
+			    validData = false;
+		}
+		}if (validData) {
+			System.out.println("data is valid , can invoke mobiledao");
+			mobilesDAO.updateMobile(mobileId);
+		} else {
+			System.out.println("mobiledto is null, invalid data");
+		}
+		return false;
+	}
+
+	@Override
+	public boolean validateAndDelete(MobileDTO mobileDTO) {
+		int mobileId=0;
+		boolean validData = false;
+		if (mobileDTO != null) {
+			System.out.println("dto is not null, will validate fields");
+		    mobileId=mobileDTO.getMobileId();
+	        if(mobileId > 0) {
+			    System.out.println("mobileId is valid");
+			    validData = true;
+		    } else {
+			    System.out.println("mobileId is invalid");
+			    validData = false;
+		}
+		}if (validData) {
+			System.out.println("data is valid , can invoke mobiledao");
+			mobilesDAO.deleteMobile(mobileId);
+		} else {
+			System.out.println("mobiledto is null, invalid data");
+		}
+		return false;
+	}
 }

@@ -5,4 +5,13 @@ import com.xwork.mobile.dto.MobileDTO;
 public interface MobileService {
 
 	public boolean validateAndSaveMobile(MobileDTO mobileDTO);
-}
+	
+	public boolean validateAndRead(MobileDTO mobileDTO);
+	
+	public boolean validateAndUpdate(MobileDTO mobileDTO);
+	
+	public boolean validateAndDelete(MobileDTO mobileDTO);
+	
+	
+	
+	}

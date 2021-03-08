@@ -13,8 +13,14 @@ public class Tester {
 		MobilesDAO mobilesDAO=new MobilesDAOImpl();
 		
 		MobileService mobileService=new MobileServiceImpl(mobilesDAO);
+	
+		//mobilesDAO.updateMobile(2);
+		//mobilesDAO.deleteMobile(1);
+     	//mobilesDAO.readMobile(9);
 		mobileService.validateAndSaveMobile(mobileDTO);
-		
+		mobileService.validateAndRead(mobileDTO);
+		mobileService.validateAndUpdate(mobileDTO);
+		mobileService.validateAndDelete(mobileDTO);
 
 	}
 
