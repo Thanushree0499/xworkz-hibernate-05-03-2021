@@ -17,16 +17,6 @@ public class MobileServiceImpl implements MobileService {
 		boolean validData = false;
 		if (mobileDTO != null) {
 			System.out.println("dto is not null, will validate fields");
-			int mobileId = mobileDTO.getMobileId();
-			if (mobileId > 0) {
-				System.out.println("mobileId is valid");
-				validData = true;
-			} else {
-				System.out.println("mobileId is invalid");
-				validData = false;
-			}
-		}
-		if (validData) {
 			String brand = mobileDTO.getBrand();
 			if (brand != null && brand.length() >= 2 && !brand.isEmpty() && !brand.contains(" ")) {
 				System.out.println("brand is valid");
@@ -35,7 +25,7 @@ public class MobileServiceImpl implements MobileService {
 				System.out.println("brand is invalid");
 				validData = false;
 			}
-		}
+		
 		if (validData) {
 			String mobileSeriesName = mobileDTO.getMobileSeriesName();
 			if (mobileSeriesName != null && mobileSeriesName.length() >= 4 && !mobileSeriesName.isEmpty()
@@ -85,6 +75,7 @@ public class MobileServiceImpl implements MobileService {
 			mobilesDAO.saveMobile(mobileDTO);
 		} else {
 			System.out.println("mobiledto is null, invalid data");
+		}
 		}
 		return false;
 	}

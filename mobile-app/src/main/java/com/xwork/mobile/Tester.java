@@ -9,18 +9,15 @@ import com.xwork.mobile.service.MobileServiceImpl;
 public class Tester {
 
 	public static void main(String[] args) {
-		MobileDTO mobileDTO =new MobileDTO(2,"samsung","samsungNote8",20000,"black",4000);
+		MobileDTO mobileDTO =new MobileDTO("redmi","redmiNote7",20000,"white",4500);
 		MobilesDAO mobilesDAO=new MobilesDAOImpl();
 		
 		MobileService mobileService=new MobileServiceImpl(mobilesDAO);
-	
-		//mobilesDAO.updateMobile(2);
-		//mobilesDAO.deleteMobile(1);
-     	//mobilesDAO.readMobile(9);
+
 		mobileService.validateAndSaveMobile(mobileDTO);
-		mobileService.validateAndRead(mobileDTO);
-		mobileService.validateAndUpdate(mobileDTO);
-		mobileService.validateAndDelete(mobileDTO);
+		//mobileService.validateAndRead(mobileDTO);
+		//mobileService.validateAndUpdate(mobileDTO);
+		//mobileService.validateAndDelete(mobileDTO);
 
 	}
 

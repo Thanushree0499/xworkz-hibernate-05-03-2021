@@ -2,6 +2,8 @@ package com.xwork.mobile.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -16,6 +18,7 @@ public class MobileDTO implements java.io.Serializable {
 
 	@Column(name="MOBILEID")
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int mobileId;
 	
 	@Column(name="BRAND")
@@ -36,21 +39,19 @@ public class MobileDTO implements java.io.Serializable {
 	public MobileDTO() {
 		
 	}
-	public MobileDTO(int mobileId, String brand, String mobileSeriesName, double price, String color,
+	public MobileDTO( String brand, String mobileSeriesName, double price, String color,
 			int batteryCapacity) {
 		super();
-		this.mobileId = mobileId;
+		
 		this.brand = brand;
 		this.mobileSeriesName = mobileSeriesName;
 		this.price = price;
 		this.color = color;
 		this.batteryCapacity = batteryCapacity;
 	}
+
 	public int getMobileId() {
 		return mobileId;
-	}
-	public void setMobileId(int mobileId) {
-		this.mobileId = mobileId;
 	}
 	public String getBrand() {
 		return brand;
