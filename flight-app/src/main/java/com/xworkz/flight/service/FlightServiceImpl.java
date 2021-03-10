@@ -7,7 +7,7 @@ public class FlightServiceImpl implements FlightService {
 	
 	private FlightDAO flightDAO;
 	
-	FlightServiceImpl(FlightDAO flightDAO){
+	public FlightServiceImpl(FlightDAO flightDAO){
 		this.flightDAO=flightDAO;
 	}
 
@@ -16,15 +16,6 @@ public class FlightServiceImpl implements FlightService {
 		boolean validData = false;
 		if(flightDTO!=null) {
 			System.out.println("dto is not null, will validate fields");
-			int flightId=flightDTO.getFlightId();
-			if (flightId > 0) {
-				System.out.println("flightId is valid");
-				validData = true;
-			} else {
-				System.out.println("flightId is invalid");
-				validData = false;
-			}
-			if (validData) {
 				String name = flightDTO.getName();
 				if (name != null && name.length() >= 2 && !name.isEmpty() && !name.contains(" ")) {
 					System.out.println("name is valid");
@@ -33,7 +24,6 @@ public class FlightServiceImpl implements FlightService {
 					System.out.println("name is invalid");
 					validData = false;
 				}
-			}
 			if (validData) {
 				String source = flightDTO.getSource();
 				if (source != null && source.length() >= 2 && !source.isEmpty() && !source.contains(" ")) {

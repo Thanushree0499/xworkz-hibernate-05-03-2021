@@ -2,6 +2,8 @@ package com.xworkz.flight.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,6 +13,7 @@ public class FlightDTO implements java.io.Serializable {
     
 	@Column(name="FLIGHTID")
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int flightId;
 	
 	@Column(name="NAME")
@@ -29,9 +32,9 @@ public class FlightDTO implements java.io.Serializable {
 		
 	}
 
-	public FlightDTO(int flightId, String name, String source, String destination, int fuelCapacity) {
+	public FlightDTO(String name, String source, String destination, int fuelCapacity) {
 		super();
-		this.flightId = flightId;
+		
 		this.name = name;
 		this.source = source;
 		this.destination = destination;
@@ -41,11 +44,6 @@ public class FlightDTO implements java.io.Serializable {
 	public int getFlightId() {
 		return flightId;
 	}
-
-	public void setFlightId(int flightId) {
-		this.flightId = flightId;
-	}
-
 	public String getName() {
 		return name;
 	}
