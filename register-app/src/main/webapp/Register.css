@@ -1,0 +1,124 @@
+@charset "ISO-8859-1";
+header{
+   height: 135px;
+   display: flex;
+   flex-direction: row;
+  
+}
+header>div{
+   width: 200px;
+   height: 97px;
+
+}
+.company-name{
+   text-align: center;
+  /* margin-right: 30%;*/
+   
+}
+.company-text{
+   text-align: center;
+   font-size: 30px;
+   position: relative;
+   top: 5px;
+   text-shadow: 2px 3px 3px palevioletred;
+   font-family:cursive;
+   color:purple;
+  
+}
+h1{
+	text-align: center;
+}
+
+.center-screen {
+   align-content: center;
+   display: flex;
+   flex-direction: column;
+   justify-content:center;
+   align-items: center;
+   text-align: center;
+   width: 300px;
+   padding: 20px;
+   background-color:palevioletred;
+   background-origin: 2px solid red;
+   position: absolute;
+   left: 50%;
+   top: 9%;
+   right:500px;
+   box-shadow: 1px 7px 6px 5px gold; 
+   margin-right:800px;
+   margin-top:30px;
+   
+   
+}
+
+.center-screen >div {
+   padding: 5px;
+   
+}
+
+input {
+   height: 30px;
+   width: 200px;
+   border-radius: 5px;
+   text-align: center;
+   font-size: 15px;
+}
+
+
+input::placeholder {
+   text-align: center;
+}
+
+.submit {
+   height: 39px;
+   width: 209px;
+   border-radius: 5px;
+   font-size: 20px;  
+}
+
+.submit:hover {
+   background-color:pink;
+   
+}
+.checkbox{
+   height: 12px;
+   width:12px;
+   border-radius: 5px;
+   margin-left: 30px;
+   margin-top: 20px;
+}
+img{
+   margin-right: 100px;
+}
+h1{
+   margin-right: 20px;
+   text-align: center;
+}
+.login{
+   width:100px;
+   height:30px;
+   background-color:pink;
+   font-weight: bold;
+}
+.submit1{
+   height: 30px;
+   width: 200px;
+   background-color:pink;
+   border-radius: 5px;
+   font-weight: bold;
+}
+a:link{
+   text-decoration: none;
+}
+.search{
+   width:100%;
+}
+.search::placeholder{
+  
+   text-align: start;
+   
+}
+.body1{
+   background-image:url("img/w6.jpg") ;
+   
+}
